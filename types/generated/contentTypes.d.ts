@@ -430,6 +430,40 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCivitasAkademikaCivitasAkademika
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'civitas_akademikas';
+  info: {
+    displayName: 'civitasAkademika';
+    pluralName: 'civitas-akademikas';
+    singularName: 'civitas-akademika';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    deskripsi: Schema.Attribute.Text;
+    Judul: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::civitas-akademika.civitas-akademika'
+    > &
+      Schema.Attribute.Private;
+    paraGurudanPengajar: Schema.Attribute.Component<
+      'para-gurudan-pengajar.guru-pengajar',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiFasilitasSekolahFasilitasSekolah
   extends Struct.CollectionTypeSchema {
   collectionName: 'fasilitas_sekolahs';
@@ -978,6 +1012,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::civitas-akademika.civitas-akademika': ApiCivitasAkademikaCivitasAkademika;
       'api::fasilitas-sekolah.fasilitas-sekolah': ApiFasilitasSekolahFasilitasSekolah;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

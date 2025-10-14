@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_para_gurudan_pengajar_guru_pengajars",
+  "info": {
+    "displayName": "guruPengajar"
+  },
+  "options": {},
+  "attributes": {
+    "nama": {
+      "type": "string"
+    },
+    "posisi": {
+      "type": "text"
+    },
+    "foto": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "alt": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
