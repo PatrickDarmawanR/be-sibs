@@ -1,20 +1,17 @@
 /**
- * fasilitas-sekolah controller
+ * civitas-akademika controller
  */
 
 import { factories } from "@strapi/strapi";
 
 export default factories.createCoreController(
-  "api::fasilitas-sekolah.fasilitas-sekolah",
+  "api::civitas-akademika.civitas-akademika",
   ({ strapi }) => ({
     async find(ctx) {
       ctx.query = {
         ...ctx.query,
         populate: {
-          fasilitasSekolah: {
-            populate: "*",
-          },
-          fasilitasAsrama: {
+          paraGurudanPengajar: {
             populate: "*",
           },
         },
@@ -28,21 +25,18 @@ export default factories.createCoreController(
       const { id } = ctx.params;
 
       const entity = await strapi.db
-        .query("api::fasilitas-sekolah.fasilitas-sekolah")
+        .query("api::civitas-akademika.civitas-akademika")
         .findOne({
           where: { id },
           populate: {
-            fasilitasSekolah: {
-              populate: "*",
-            },
-            fasilitasAsrama: {
+            paraGurudanPengajar: {
               populate: "*",
             },
           },
         });
 
       if (!entity) {
-        return ctx.notFound("Data fasilitas sekolah tidak ditemukan");
+        return ctx.notFound("Data civitas akademika tidak ditemukan");
       }
 
       return { data: entity };
