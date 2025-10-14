@@ -12,10 +12,10 @@ export default factories.createCoreController(
         ...ctx.query,
         populate: {
           fasilitasSekolah: {
-            populate: ["*"],
+            populate: "*",
           },
           fasilitasAsrama: {
-            populate: ["*"],
+            populate: "*",
           },
         },
       };
@@ -31,10 +31,10 @@ export default factories.createCoreController(
         where: { id },
         populate: {
           fasilitasSekolah: {
-            populate: ["*"],
+            populate: "*",
           },
           fasilitasAsrama: {
-            populate: ["*"],
+            populate: "*",
           },
         },
       });
