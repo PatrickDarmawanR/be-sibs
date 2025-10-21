@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_form_smpit_form_smpits",
+  "info": {
+    "displayName": "formSMPIT"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_program_smpit_academics",
+  "info": {
+    "displayName": "academic"
+  },
+  "options": {},
+  "attributes": {
+    "intracurricular": {
+      "type": "component",
+      "component": "category-program-academic-smpit.intracurricular",
+      "repeatable": false
+    },
+    "cocurricular": {
+      "type": "component",
+      "component": "category-program-academic-smpit.cocurricular",
+      "repeatable": false
+    },
+    "schedule": {
+      "type": "component",
+      "component": "category-program-academic-smpit.schedule",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

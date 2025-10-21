@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_academic_community_opening_speeches",
+  "info": {
+    "displayName": "openingSpeech"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "alt": {
+      "type": "string"
+    },
+    "quotes": {
+      "type": "string"
+    },
+    "speech": {
+      "type": "text"
+    },
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

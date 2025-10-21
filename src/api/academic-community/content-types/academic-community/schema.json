@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "academic_communities",
+  "info": {
+    "singularName": "academic-community",
+    "pluralName": "academic-communities",
+    "displayName": "academicCommunity"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section_1": {
+      "type": "component",
+      "component": "academic-community.section-1",
+      "repeatable": false
+    },
+    "section_2": {
+      "type": "component",
+      "component": "academic-community.section-2",
+      "repeatable": false
+    }
+  }
+}

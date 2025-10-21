@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_smait_section_2s",
+  "info": {
+    "displayName": "section_2"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "textVisi": {
+      "type": "string"
+    },
+    "descriptionVisi": {
+      "type": "text"
+    },
+    "textMisi": {
+      "type": "string"
+    },
+    "descriptionMisi": {
+      "type": "component",
+      "component": "misi-smait.description-misi",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

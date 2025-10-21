@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_academic_community_section_1s",
+  "info": {
+    "displayName": "section_1"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "openingSpeech": {
+      "type": "component",
+      "component": "academic-community.opening-speech",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

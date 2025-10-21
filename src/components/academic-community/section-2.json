@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_academic_community_section_2s",
+  "info": {
+    "displayName": "section_2"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "teacherAndInstructors": {
+      "type": "component",
+      "component": "academic-community.teacher-and-instructors",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

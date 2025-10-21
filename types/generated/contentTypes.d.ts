@@ -430,13 +430,13 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiCivitasAkademikaCivitasAkademika
+export interface ApiAcademicCommunityAcademicCommunity
   extends Struct.CollectionTypeSchema {
-  collectionName: 'civitas_akademikas';
+  collectionName: 'academic_communities';
   info: {
-    displayName: 'civitasAkademika';
-    pluralName: 'civitas-akademikas';
-    singularName: 'civitas-akademika';
+    displayName: 'academicCommunity';
+    pluralName: 'academic-communities';
+    singularName: 'academic-community';
   };
   options: {
     draftAndPublish: true;
@@ -445,32 +445,33 @@ export interface ApiCivitasAkademikaCivitasAkademika
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    deskripsi: Schema.Attribute.Text;
-    Judul: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::civitas-akademika.civitas-akademika'
+      'api::academic-community.academic-community'
     > &
       Schema.Attribute.Private;
-    paraGurudanPengajar: Schema.Attribute.Component<
-      'para-gurudan-pengajar.guru-pengajar',
-      true
-    >;
     publishedAt: Schema.Attribute.DateTime;
+    section_1: Schema.Attribute.Component<
+      'academic-community.section-1',
+      false
+    >;
+    section_2: Schema.Attribute.Component<
+      'academic-community.section-2',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
   };
 }
 
-export interface ApiFasilitasSekolahFasilitasSekolah
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'fasilitas_sekolahs';
+export interface ApiHomeHome extends Struct.CollectionTypeSchema {
+  collectionName: 'homes';
   info: {
-    displayName: 'fasilitasSekolah';
-    pluralName: 'fasilitas-sekolahs';
-    singularName: 'fasilitas-sekolah';
+    displayName: 'home';
+    pluralName: 'homes';
+    singularName: 'home';
   };
   options: {
     draftAndPublish: true;
@@ -479,23 +480,116 @@ export interface ApiFasilitasSekolahFasilitasSekolah
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    deskripsi: Schema.Attribute.Text;
-    fasilitasAsrama: Schema.Attribute.Component<
-      'sekolah.fasilitas-asrama',
-      true
-    >;
-    fasilitasSekolah: Schema.Attribute.Component<
-      'sekolah.fasilitas-sekolah',
-      true
-    >;
-    Judul: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    section_1: Schema.Attribute.Component<'home.section-1', false>;
+    section_2: Schema.Attribute.Component<'home.section-2', false>;
+    section_3: Schema.Attribute.Component<'home.section-3', false>;
+    section_4: Schema.Attribute.Component<'home.section-4', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProgramSmpitProgramSmpit
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'program_smpits';
+  info: {
+    displayName: 'programSMPIT';
+    pluralName: 'program-smpits';
+    singularName: 'program-smpit';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    academic: Schema.Attribute.Component<'program-smpit.academic', false>;
+    alt: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
-      'api::fasilitas-sekolah.fasilitas-sekolah'
+      'api::program-smpit.program-smpit'
+    > &
+      Schema.Attribute.Private;
+    nonAcademic: Schema.Attribute.Component<
+      'program-smpit.non-academic',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSchoolFacilitySchoolFacility
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'school_facilities';
+  info: {
+    displayName: 'schoolFacility';
+    pluralName: 'school-facilities';
+    singularName: 'school-facility';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    dormitory: Schema.Attribute.Component<
+      'facility.dormitory-facilities',
+      true
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::school-facility.school-facility'
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    school: Schema.Attribute.Component<'facility.school-facilities', true>;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiSchoolProfileSchoolProfile
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'school_profiles';
+  info: {
+    displayName: 'schoolProfile';
+    pluralName: 'school-profiles';
+    singularName: 'school-profile';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::school-profile.school-profile'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    SMAIT: Schema.Attribute.Component<'school-profile.smait', false>;
+    SMPIT: Schema.Attribute.Component<'school-profile.smpit', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1012,8 +1106,11 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::civitas-akademika.civitas-akademika': ApiCivitasAkademikaCivitasAkademika;
-      'api::fasilitas-sekolah.fasilitas-sekolah': ApiFasilitasSekolahFasilitasSekolah;
+      'api::academic-community.academic-community': ApiAcademicCommunityAcademicCommunity;
+      'api::home.home': ApiHomeHome;
+      'api::program-smpit.program-smpit': ApiProgramSmpitProgramSmpit;
+      'api::school-facility.school-facility': ApiSchoolFacilitySchoolFacility;
+      'api::school-profile.school-profile': ApiSchoolProfileSchoolProfile;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

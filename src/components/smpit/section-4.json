@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_smpit_section_4s",
+  "info": {
+    "displayName": "section_4"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "numberOfAspects": {
+      "type": "integer"
+    },
+    "textAspect": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "accordionAspect": {
+      "type": "component",
+      "component": "accordion.accordion-aspect",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

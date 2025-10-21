@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_school_profile_smpits",
+  "info": {
+    "displayName": "SMPIT"
+  },
+  "options": {},
+  "attributes": {
+    "section_1": {
+      "type": "component",
+      "component": "smpit.section-1",
+      "repeatable": false
+    },
+    "section_2": {
+      "type": "component",
+      "component": "smpit.section-2",
+      "repeatable": false
+    },
+    "section_3": {
+      "type": "component",
+      "component": "smpit.section-3",
+      "repeatable": false
+    },
+    "section_4": {
+      "type": "component",
+      "component": "smpit.section-4",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

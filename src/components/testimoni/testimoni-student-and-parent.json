@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_testimoni_testimoni_student_and_parents",
+  "info": {
+    "displayName": "testimoniStudentAndParent"
+  },
+  "options": {},
+  "attributes": {
+    "profile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "alt": {
+      "type": "string"
+    },
+    "testimonial": {
+      "type": "text"
+    },
+    "testimonialName": {
+      "type": "string"
+    },
+    "testimonialRole": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

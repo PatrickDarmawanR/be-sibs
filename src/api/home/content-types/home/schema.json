@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section_1": {
+      "type": "component",
+      "component": "home.section-1",
+      "repeatable": false
+    },
+    "section_2": {
+      "type": "component",
+      "component": "home.section-2",
+      "repeatable": false
+    },
+    "section_3": {
+      "type": "component",
+      "component": "home.section-3",
+      "repeatable": false
+    },
+    "section_4": {
+      "type": "component",
+      "component": "home.section-4",
+      "repeatable": false
+    }
+  }
+}

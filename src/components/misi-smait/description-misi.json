@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_misi_smait_description_misis",
+  "info": {
+    "displayName": "descriptionMisi"
+  },
+  "options": {},
+  "attributes": {
+    "point": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

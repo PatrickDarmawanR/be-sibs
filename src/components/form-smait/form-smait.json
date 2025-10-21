@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_form_smait_form_smaits",
+  "info": {
+    "displayName": "formSMAIT"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

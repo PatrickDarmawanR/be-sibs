@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_smpit_section_3s",
+  "info": {
+    "displayName": "section_3"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "superiority": {
+      "type": "component",
+      "component": "superiority-smpit.superiority",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

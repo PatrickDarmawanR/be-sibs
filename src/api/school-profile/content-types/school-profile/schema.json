@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "school_profiles",
+  "info": {
+    "singularName": "school-profile",
+    "pluralName": "school-profiles",
+    "displayName": "schoolProfile"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SMPIT": {
+      "type": "component",
+      "component": "school-profile.smpit",
+      "repeatable": false
+    },
+    "SMAIT": {
+      "type": "component",
+      "component": "school-profile.smait",
+      "repeatable": false
+    }
+  }
+}

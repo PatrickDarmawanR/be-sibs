@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_home_section_4s",
+  "info": {
+    "displayName": "section_4"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "testimoniStudentAndParent": {
+      "type": "component",
+      "component": "testimoni.testimoni-student-and-parent",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

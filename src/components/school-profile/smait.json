@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_school_profile_smaits",
+  "info": {
+    "displayName": "SMAIT"
+  },
+  "options": {},
+  "attributes": {
+    "section_1": {
+      "type": "component",
+      "component": "smait.section-1",
+      "repeatable": false
+    },
+    "section_2": {
+      "type": "component",
+      "component": "smait.section-2",
+      "repeatable": false
+    },
+    "section_3": {
+      "type": "component",
+      "component": "smait.section-3",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

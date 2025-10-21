@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_home_section_2s",
+  "info": {
+    "displayName": "section_2"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "formSMPIT": {
+      "type": "component",
+      "component": "form-smpit.form-smpit",
+      "repeatable": false
+    },
+    "formSMAIT": {
+      "type": "component",
+      "component": "form-smait.form-smait",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

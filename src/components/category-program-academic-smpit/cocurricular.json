@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_category_program_academic_smpit_cocurriculars",
+  "info": {
+    "displayName": "cocurricular"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

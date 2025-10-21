@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_facility_dormitory_facilities",
+  "info": {
+    "displayName": "dormitoryFacilities"
+  },
+  "options": {},
+  "attributes": {
+    "alt": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

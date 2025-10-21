@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_why_study_component_why_studies",
+  "info": {
+    "displayName": "whyStudy"
+  },
+  "options": {},
+  "attributes": {
+    "whyStudyMain": {
+      "type": "component",
+      "component": "why-study-component.why-study-main",
+      "repeatable": false
+    },
+    "whyStudySubMain": {
+      "type": "component",
+      "component": "why-study-component.why-study-sub-main",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

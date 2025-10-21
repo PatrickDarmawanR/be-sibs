@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_points_sub_point_aspects",
+  "info": {
+    "displayName": "subPointAspect"
+  },
+  "options": {},
+  "attributes": {
+    "point": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
