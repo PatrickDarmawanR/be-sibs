@@ -11,8 +11,17 @@ export default factories.createCoreController(
       ctx.query = {
         ...ctx.query,
         populate: {
-          section_1: { populate: { openingSpeech: { populate: { image: true } } } },
-          section_2: { populate: { teacherAndInstructors: { populate: { image: true } } } },
+          section_1: {
+            populate: {
+              openingSpeech: { populate: { image: true } },
+            },
+          },
+          section_2: {
+            populate: {
+              teacherAndInstructors: { populate: { image: true } },
+              head: { populate: { image: true } },
+            },
+          },
         },
       };
 
@@ -50,6 +59,14 @@ export default factories.createCoreController(
         section_2: attrs.section_2 && {
           title: attrs.section_2.title,
           description: attrs.section_2.description,
+          head:
+            attrs.section_2.head?.map((person) => ({
+              alt: person.alt,
+              name: person.name,
+              position: person.position,
+              imageUrl: mapImage(person.image),
+            })) || [],
+
           teacherAndInstructors:
             attrs.section_2.teacherAndInstructors?.map((person) => ({
               alt: person.alt,

@@ -19,11 +19,6 @@
       "type": "component",
       "component": "smpit.section-3",
       "repeatable": false
-    },
-    "section_4": {
-      "type": "component",
-      "component": "smpit.section-4",
-      "repeatable": false
     }
   },
   "config": {}

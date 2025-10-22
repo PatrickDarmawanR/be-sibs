@@ -18,9 +18,6 @@ export default factories.createCoreController(
                 populate: { image: true, descriptionMisi: { populate: "*" } },
               },
               section_3: { populate: { superiority: { populate: "*" } } },
-              section_4: {
-                populate: { icon: true, accordionAspect: { populate: "*" } },
-              },
             },
           },
           SMAIT: {
@@ -78,20 +75,7 @@ export default factories.createCoreController(
                 iconUrl: s.icon?.url ? `${baseUrl}${s.icon.url}` : null,
               })) || [],
           },
-          section_4: attrs.SMPIT?.section_4 && {
-            title: attrs.SMPIT.section_4.title,
-            iconUrl: attrs.SMPIT.section_4.icon?.url
-              ? `${baseUrl}${attrs.SMPIT.section_4.icon.url}`
-              : null,
-            numberOfAspects: attrs.SMPIT.section_4.numberOfAspects,
-            textAspect: attrs.SMPIT.section_4.textAspect,
-            description: attrs.SMPIT.section_4.description,
-            accordionAspect:
-              attrs.SMPIT.section_4.accordionAspect?.map((a) => ({
-                title: a.title,
-                subPointAspect: a.subPointAspect,
-              })) || [],
-          },
+          
         },
         SMAIT: {
           section_1: attrs.SMAIT?.section_1 && {

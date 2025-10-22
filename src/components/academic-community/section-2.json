@@ -11,6 +11,11 @@
     "description": {
       "type": "text"
     },
+    "head": {
+      "type": "component",
+      "component": "academic-community.head",
+      "repeatable": true
+    },
     "teacherAndInstructors": {
       "type": "component",
       "component": "academic-community.teacher-and-instructors",

@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface AcademicCommunityHead extends Struct.ComponentSchema {
+  collectionName: 'components_academic_community_heads';
+  info: {
+    displayName: 'head';
+  };
+  attributes: {
+    alt: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.String;
+    position: Schema.Attribute.String;
+  };
+}
+
 export interface AcademicCommunityOpeningSpeech extends Struct.ComponentSchema {
   collectionName: 'components_academic_community_opening_speeches';
   info: {
@@ -37,6 +50,7 @@ export interface AcademicCommunitySection2 extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    head: Schema.Attribute.Component<'academic-community.head', true>;
     teacherAndInstructors: Schema.Attribute.Component<
       'academic-community.teacher-and-instructors',
       true
@@ -56,17 +70,6 @@ export interface AcademicCommunityTeacherAndInstructors
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     name: Schema.Attribute.String;
     position: Schema.Attribute.String;
-  };
-}
-
-export interface AccordionAccordionAspect extends Struct.ComponentSchema {
-  collectionName: 'components_accordion_accordion_aspects';
-  info: {
-    displayName: 'accordionAspect';
-  };
-  attributes: {
-    subPointAspect: Schema.Attribute.Component<'points.sub-point-aspect', true>;
-    title: Schema.Attribute.String;
   };
 }
 
@@ -273,26 +276,6 @@ export interface MisiDescriptionMisi extends Struct.ComponentSchema {
   };
 }
 
-export interface PoinPoinAspek extends Struct.ComponentSchema {
-  collectionName: 'components_poin_poin_aspeks';
-  info: {
-    displayName: 'poinAspek';
-  };
-  attributes: {
-    poin: Schema.Attribute.Text;
-  };
-}
-
-export interface PointsSubPointAspect extends Struct.ComponentSchema {
-  collectionName: 'components_points_sub_point_aspects';
-  info: {
-    displayName: 'subPointAspect';
-  };
-  attributes: {
-    point: Schema.Attribute.String;
-  };
-}
-
 export interface ProgramSmpitAcademic extends Struct.ComponentSchema {
   collectionName: 'components_program_smpit_academics';
   info: {
@@ -368,7 +351,6 @@ export interface SchoolProfileSmpit extends Struct.ComponentSchema {
     section_1: Schema.Attribute.Component<'smpit.section-1', false>;
     section_2: Schema.Attribute.Component<'smpit.section-2', false>;
     section_3: Schema.Attribute.Component<'smpit.section-3', false>;
-    section_4: Schema.Attribute.Component<'smpit.section-4', false>;
   };
 }
 
@@ -462,24 +444,6 @@ export interface SmpitSection3 extends Struct.ComponentSchema {
   };
 }
 
-export interface SmpitSection4 extends Struct.ComponentSchema {
-  collectionName: 'components_smpit_section_4s';
-  info: {
-    displayName: 'section_4';
-  };
-  attributes: {
-    accordionAspect: Schema.Attribute.Component<
-      'accordion.accordion-aspect',
-      true
-    >;
-    description: Schema.Attribute.Text;
-    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    numberOfAspects: Schema.Attribute.Integer;
-    textAspect: Schema.Attribute.String;
-    title: Schema.Attribute.String;
-  };
-}
-
 export interface SuperioritySmaitSuperiority extends Struct.ComponentSchema {
   collectionName: 'components_superiority_smait_superiorities';
   info: {
@@ -568,11 +532,11 @@ export interface WhyStudyComponentWhyStudySubMain
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'academic-community.head': AcademicCommunityHead;
       'academic-community.opening-speech': AcademicCommunityOpeningSpeech;
       'academic-community.section-1': AcademicCommunitySection1;
       'academic-community.section-2': AcademicCommunitySection2;
       'academic-community.teacher-and-instructors': AcademicCommunityTeacherAndInstructors;
-      'accordion.accordion-aspect': AccordionAccordionAspect;
       'category-program-academic-smpit.cocurricular': CategoryProgramAcademicSmpitCocurricular;
       'category-program-academic-smpit.intracurricular': CategoryProgramAcademicSmpitIntracurricular;
       'category-program-academic-smpit.schedule': CategoryProgramAcademicSmpitSchedule;
@@ -589,8 +553,6 @@ declare module '@strapi/strapi' {
       'home.section-4': HomeSection4;
       'misi-smait.description-misi': MisiSmaitDescriptionMisi;
       'misi.description-misi': MisiDescriptionMisi;
-      'poin.poin-aspek': PoinPoinAspek;
-      'points.sub-point-aspect': PointsSubPointAspect;
       'program-smpit.academic': ProgramSmpitAcademic;
       'program-smpit.non-academic': ProgramSmpitNonAcademic;
       'program-smpit.section-1': ProgramSmpitSection1;
@@ -603,7 +565,6 @@ declare module '@strapi/strapi' {
       'smpit.section-1': SmpitSection1;
       'smpit.section-2': SmpitSection2;
       'smpit.section-3': SmpitSection3;
-      'smpit.section-4': SmpitSection4;
       'superiority-smait.superiority': SuperioritySmaitSuperiority;
       'superiority-smpit.superiority': SuperioritySmpitSuperiority;
       'testimoni.testimoni-student-and-parent': TestimoniTestimoniStudentAndParent;
